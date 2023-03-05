@@ -28,7 +28,7 @@ class IOSLexer(RegexLexer):
             (r'[a-f0-9]*:[a-f0-9]*:[a-f0-9:]*(:\d+\.\d+\.\d+\.\d+)?(/\d+)?',
              Number),  # IPv6
             (r'\d+\.\d+\.\d+\.\d+(/\d+)?', Number),  # IPv4
-            (r'^([ \t]*)(no[ \t]+)?([-\w]+)',
+            (r'^([ \t]*)(no[ \t]+)?([a-z][-\w]*)',
              bygroups(Text, Keyword, Name.Function)),
             (r'[ \t]+', Text),
             (r'\n', Text),
